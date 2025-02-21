@@ -28,6 +28,7 @@
 
 	/* Border Radius */
 	--btn-radius: 1.5rem;
+	--circle-radius: 50%;
 
 	/* Width */
 	--container-mw: 1280px;
@@ -58,6 +59,12 @@ a {
 	text-decoration: none;
 }
 
+button {
+	background-color: transparent;
+	border: none;
+	outline: none;
+}
+
 ul {
 	list-style: none;
 }
@@ -78,6 +85,16 @@ img {
 .logo img {
 	width: 50px;
 	opacity: 0.75;
+}
+
+.btn {
+	border: 3px solid transparent;
+	border-radius: var(--btn-radius);
+	padding: 0.85rem 1.85rem;
+	font-weight: var(--medium-fw);
+	font-size: var(--lg-fs);
+	transition: 0.45s ease-in-out;
+	text-transform: capitalize;
 }
 
 /***************** NAVBAR *******************/
@@ -112,5 +129,71 @@ img {
 /************** End of NAVBAR ***************/
 
 /***************** BANNER *******************/
-/* TODO: Create BANNER style */
+.banner-content {
+	min-height: calc(100vh - 80px);
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 2.75rem;
+	align-items: center;
+}
+
+.banner-title {
+	font-size: var(--xxl-fs);
+	text-transform: uppercase;
+}
+
+.banner-subtitle {
+	font-size: var(--xl-fs);
+	color: var(--black-color-10);
+	text-transform: capitalize;
+	margin-top: -0.75rem;
+	margin-bottom: 1.5rem;
+}
+
+.banner-links {
+	display: flex;
+	align-items: center;
+	gap: 1.75rem;
+}
+
+.primary-btn {
+	background-color: var(--primary-color);
+	color: var(--white-color-00);
+}
+
+.secondary-btn {
+	border-color: var(--primary-color);
+	color: var(--primary-color);
+}
+
+.primary-btn:hover {
+	background-color: transparent;
+	color: var(--primary-color);
+	border-color: var(--primary-color);
+}
+
+.secondary-btn:hover {
+	background-color: var(--primary-color);
+	color: var(--white-color-00);
+}
+
+.banner-image {
+	position: relative;
+}
+
+.banner-image::after,
+.banner-image::before {
+	position: absolute;
+	content: '';
+	width: 450px;
+	height: 450px;
+	border-radius: var(--circle-radius);
+	background-color: var(--white-color-00);
+	bottom: -70%;
+}
+
+.banner-image::before {
+	right: 1rem;
+	bottom: -27.25rem;
+}
 /************** End of BANNER ***************/
