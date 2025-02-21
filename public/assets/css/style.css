@@ -1,0 +1,69 @@
+/***************** Imports *******************/
+@import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/***************** Variables *******************/
+:root {
+	/* Colors */
+	--black-color-00: #000;
+	--black-color-10: #2c2832;
+	--primary-color: #f5d900;
+	--secondary-color: #d5a475;
+	--white-color-00: #fff;
+
+	/* Font Family */
+	--title-ff: 'Sigmar', sans-serif;
+	--text-ff: 'Roboto', sans-serif;
+
+	/* Font Wight */
+	--light-fw: 300;
+	--normal-fw: 400;
+	--medium-fw: 500;
+
+	/* Border Radius */
+	--medium-radius: 1.5rem;
+}
+
+/***************** General *******************/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--white-color-00);
+	font-family: var(--text-ff);
+}
+
+:is(h1, h2, h3, h4, h5) {
+	font-family: var(--title-ff);
+	color: var(--secondary-color);
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+/***************** Reusable *******************/
+.logo img {
+	width: 60px;
+}
+
+/***************** NAVBAR *******************/
+/* TODO: Create NAVBAR style */
+/************** End of NAVBAR ***************/
+
+/***************** BANNER *******************/
+/* TODO: Create BANNER style */
+/************** End of BANNER ***************/
