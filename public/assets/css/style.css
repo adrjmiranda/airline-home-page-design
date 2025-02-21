@@ -181,15 +181,26 @@ img {
 	position: relative;
 }
 
+.banner-image img {
+	filter: drop-shadow(1px 1px 15px rgba(0, 0, 0, 0.25));
+	z-index: 0;
+}
+
 .banner-image::after,
 .banner-image::before {
+	z-index: 10;
 	position: absolute;
 	content: '';
 	width: 450px;
 	height: 450px;
 	border-radius: var(--circle-radius);
 	background-color: var(--white-color-00);
-	bottom: -70%;
+	filter: drop-shadow(1px 1px 15px rgba(0, 0, 0, 0.03));
+}
+
+.banner-image::after {
+	bottom: -25rem;
+	right: 12rem;
 }
 
 .banner-image::before {
