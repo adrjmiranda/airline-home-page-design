@@ -20,8 +20,20 @@
 	--normal-fw: 400;
 	--medium-fw: 500;
 
+	/* Font Size */
+	--base-fs: 1rem;
+	--lg-fs: 1.25rem;
+	--xl-fs: 1.85rem;
+	--xxl-fs: 2.75rem;
+
 	/* Border Radius */
-	--medium-radius: 1.5rem;
+	--btn-radius: 1.5rem;
+
+	/* Width */
+	--container-mw: 1280px;
+
+	/* Padding */
+	--container-pi: 0.85rem;
 }
 
 /***************** General *******************/
@@ -38,6 +50,7 @@ body {
 
 :is(h1, h2, h3, h4, h5) {
 	font-family: var(--title-ff);
+	font-weight: var(--normal-fw);
 	color: var(--secondary-color);
 }
 
@@ -56,12 +69,46 @@ img {
 }
 
 /***************** Reusable *******************/
+.container {
+	max-width: var(--container-mw);
+	padding-inline: var(--container-pi);
+	margin: 0 auto;
+}
+
 .logo img {
-	width: 60px;
+	width: 50px;
+	opacity: 0.75;
 }
 
 /***************** NAVBAR *******************/
-/* TODO: Create NAVBAR style */
+#navbar {
+	box-shadow: 0 2px 15px 1px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-content {
+	display: flex;
+	justify-content: space-between;
+	height: 80px;
+	align-items: center;
+}
+
+.navbar-menu {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+}
+
+.navbar-link {
+	font-weight: var(--medium-fw);
+	font-size: var(--base-fs);
+	color: var(--black-color-10);
+	transition: color 0.36s ease-in-out;
+	text-transform: uppercase;
+}
+
+.navbar-link:hover {
+	color: var(--black-color-00);
+}
 /************** End of NAVBAR ***************/
 
 /***************** BANNER *******************/
