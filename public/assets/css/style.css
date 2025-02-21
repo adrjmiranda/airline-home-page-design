@@ -47,6 +47,7 @@
 body {
 	background-color: var(--white-color-00);
 	font-family: var(--text-ff);
+	overflow-x: hidden;
 }
 
 :is(h1, h2, h3, h4, h5) {
@@ -63,6 +64,11 @@ button {
 	background-color: transparent;
 	border: none;
 	outline: none;
+	cursor: pointer;
+}
+
+button i {
+	pointer-events: none;
 }
 
 ul {
@@ -95,6 +101,7 @@ img {
 	font-size: var(--lg-fs);
 	transition: 0.45s ease-in-out;
 	text-transform: capitalize;
+	text-align: center;
 }
 
 /***************** NAVBAR *******************/
@@ -107,6 +114,14 @@ img {
 	justify-content: space-between;
 	height: 80px;
 	align-items: center;
+}
+
+#toggle-menu {
+	display: none;
+	justify-content: center;
+	align-items: center;
+	font-size: var(--xl-fs);
+	color: var(--black-color-10);
 }
 
 .navbar-menu {
@@ -129,6 +144,10 @@ img {
 /************** End of NAVBAR ***************/
 
 /***************** BANNER *******************/
+#banner {
+	overflow-x: hidden;
+}
+
 .banner-content {
 	min-height: calc(100vh - 80px);
 	display: grid;
@@ -184,6 +203,7 @@ img {
 
 .banner-image {
 	position: relative;
+	overflow: hidden;
 }
 
 .banner-image img {
@@ -214,3 +234,52 @@ img {
 	right: -5%;
 }
 /************** End of BANNER ***************/
+
+@media screen and (max-width: 768px) {
+	/***************** NAVBAR *******************/
+	.navbar-content {
+		flex-wrap: wrap;
+		height: auto;
+		padding-block: 1.25rem;
+	}
+
+	#toggle-menu {
+		display: flex;
+	}
+
+	.navbar-menu {
+		margin-top: 0.85rem;
+		flex-direction: column;
+		width: 100%;
+		display: none;
+	}
+
+	.navbar-menu.show {
+		display: flex;
+	}
+	/************** End of NAVBAR ***************/
+
+	/***************** BANNER *******************/
+	#banner {
+		padding-block: 1.75rem;
+	}
+
+	.banner-content {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.banner-title,
+	.banner-subtitle {
+		text-align: center;
+	}
+
+	.banner-links {
+		flex-direction: column;
+	}
+
+	.btn {
+		width: 100%;
+	}
+	/************** End of BANNER ***************/
+}
